@@ -89,7 +89,7 @@ The model suffered with overfitting, evident through sudden increase of validati
 The two explainations for overfitting, in my opinion were : Small dataset and Model complexity.
 For the first reason, there wasn't much I could do. As for second, I tried to simplify the model complexity but the model accuracy suffered only more.
 
-The logical explaination at the time seemed - the process of feature extraction in my code is inefficient and transfer learning might be the rescue which might capture patterns even with only 20k images. 
+The logical explaination at the time seemed - the process of feature extraction in my code is inefficient and transfer learning might be the rescue which would capture patterns better even with only 20k images. 
 
 Later, I tried to implement VGG-16 pre-trained imagenet weights for model training, but this time, the Kaggle notebook ran out of space. At the time while generating image vectors and label vectors through one-hot encoding, the Kaggle RAM of 30 GB depleted since around 15-20 GB was used by image data, 5 GB was reserved by the system and rest was not enough because the picture sizes required for VGG-16 were (224,224) instead of old (80,60) in my network leading to exponential increase in arrays of image vectors and labels.
 
