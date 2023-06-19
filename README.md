@@ -73,7 +73,7 @@
 
 11.Comments : 
 - Black can be called the most popular colour amongst men and women for summer.
-- Personal Care products were only introduced in the market 2017.
+- Personal Care products were only introduced in the market in 2017.
 - Further EDA for the dataset would differ as per requirements and can be easily obtained with the help of the use cases.
 
 # Task 2 - Model
