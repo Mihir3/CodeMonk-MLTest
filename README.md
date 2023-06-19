@@ -75,3 +75,26 @@
 - Black can be called the most popular colour amongst men and women for summer.
 - Personal Care products were only introduced in the market 2017.
 - Further EDA for the dataset would differ as per requirements and can be easily obtained with the help of the use cases.
+
+# Task 2 - Model
+
+The model was built in Tensorflow because of my relative familiarity with the framework instead of Pytorch.
+
+The data entries with missing values in any variable were dropped.
+
+In my first attempt, for the fashion dataset, since the images were of low resolution with easy distinguishable classes, I wrote a simple Convolutional Neural Network with four convolutional layers. For the model, because of 44k images, the training crashed multple times, hence I made the assumption of using a smaller version of the dataset with 20k images. 
+
+The model suffered with overfitting, evident through sudden increase of validation loss to 28.82 in 9th epoch. As expected, the model performed very well on test images with 98% accuracy and failed tremendously with unseen Amazon images classifying all pictures for 'Men'.
+
+The two explainations for overfitting, in my opinion were : Small dataset and Model complexity.
+For the first reason, there wasn't much I could do. As for second, I tried to simplify the model complexity but the model accuracy suffered only more.
+
+The logical explaination at the time seemed - the process of feature extraction in my code is inefficient and transfer learning might be the rescue which might capture patterns even with only 20k images. 
+
+Later, I tried to implement VGG-16 pre-trained imagenet weights for model training, but this time, the Kaggle notebook ran out of space. At the time while generating image vectors and label vectors through one-hot encoding, the Kaggle RAM of 30 GB depleted since around 15-20 GB was used by image data, 5 GB was reserved by the system and rest was not enough because the picture sizes required for VGG-16 were (224,224) instead of old (80,60) in my network leading to exponential increase in arrays of image vectors and labels.
+
+Thus, this version of the notebook has the code written by me in the first attempt with unsuccessful results. I sincerely hope that the justifications written above would be considered for the model shortcomings.
+
+
+
+
