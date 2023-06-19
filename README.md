@@ -93,7 +93,9 @@ The logical explaination at the time seemed - the process of feature extraction 
 
 Later, I tried to implement VGG-16 pre-trained imagenet weights for model training, but this time, the Kaggle notebook ran out of space. At the time while generating image vectors and label vectors through one-hot encoding, the Kaggle RAM of 30 GB depleted since around 15-20 GB was used by image data, 5 GB was reserved by the system and rest was not enough because the picture sizes required for VGG-16 were (224,224) instead of old (80,60) in my network leading to exponential increase in arrays of image vectors and labels.
 
-Thus, this version of the notebook has the code written by me in the first attempt with unsuccessful results. I sincerely hope that the justifications written above would be considered for the model shortcomings.
+Thus, this version of the notebook has the code written by me in the first attempt with unsuccessful results because of overfitting. And the TensorFlow model from the notebook is at Link[https://drive.google.com/drive/folders/1jotk0lf_IE9XOYzMa75g0FqBTutLw2FO?usp=sharing] .
+
+I sincerely hope that the justifications written above would be considered for the model shortcomings.
 
 
 
